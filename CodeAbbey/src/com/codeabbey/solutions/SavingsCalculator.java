@@ -1,8 +1,6 @@
 package com.codeabbey.solutions;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.Scanner;
 
 public class SavingsCalculator {
@@ -25,23 +23,23 @@ public class SavingsCalculator {
 	}
 	
 	static int findYears(String problem) {
-		int years = 0 , cnt=0;
+		int years = 0 ; //, cnt=0;
 		String [] parts = problem.split(" ");
 		double S = Double.parseDouble( parts[0]);
+		double I =0;
 		
 		double R = Double.parseDouble(parts[1]);
 		double P = Double.parseDouble(parts[2]);
 		
-		DecimalFormat df = new DecimalFormat("#.##");
-		
 		while(S < R) {
 			//S = Double.parseDouble( df.format(  ( S * P/100)));
-			S =  S + ( S * P /100);
+			I = (double) Math.round( (S * P /100) * 100 )/100;
+			//System.out.println(" \t " + S + " \t " + I);
+			S =  S + I;
 			S = (double) Math.round(S*100)/100;
-			//System.out.println(S);
 			years++;
 		}
-		System.out.println( "\t\t in " + years + "  " +  S + " vs " + R);
+		//System.out.println( "\t\t in " + years + "  " +  S + " vs " + R);
 		return years;
 	}
 
