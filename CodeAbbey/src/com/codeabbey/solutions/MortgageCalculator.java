@@ -1,8 +1,5 @@
 package com.codeabbey.solutions;
 
-import java.math.BigInteger;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class MortgageCalculator {
