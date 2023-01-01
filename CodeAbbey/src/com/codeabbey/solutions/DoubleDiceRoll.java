@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class DoubleDiceRoll {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
 		int noOfCases = Integer.parseInt(in.nextLine());
 		StringBuffer answer = new StringBuffer();
